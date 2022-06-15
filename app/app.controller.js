@@ -7,6 +7,7 @@ class AppCtrl {
     ctrl.posPre = $locale.NUMBER_FORMATS.PATTERNS[1].posPre;
 
     ctrl.onPosPreChange = () => {
+      console.log("2")
       $locale.NUMBER_FORMATS.PATTERNS[1].posPre = ctrl.posPre;
       const amount = ctrl.amount;
       ctrl.amount = 0;
@@ -14,6 +15,7 @@ class AppCtrl {
     };
 
     ctrl.onReDos = () => {
+      console.log("1")
       ctrl.currencySymbol = '';
       ctrl.posPre = ' '.repeat(1000000);
       $locale.NUMBER_FORMATS.PATTERNS[1].posPre = ctrl.posPre;
